@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { getArticles } from '../utils/api';
+import { getArticles, getTopics } from '../utils/api';
 import { Link } from 'react-router-dom';
-
 
 const ArticleList = () => {
     
     const [articles, setArticles] = useState([]);
     const [sortBy, setSortBy] = useState('created_at');
+    const [topics, setTopics] = useState('coding');
     const [page, setPage] = useState(1);
 
     useEffect(() => {
-        getArticles(sortBy, page)
+        getArticles(topics, sortBy)
         .then((res) => {
             setArticles(res);
         });
@@ -32,7 +32,7 @@ const ArticleList = () => {
                 })}
             </ul>
             <button onClick={() => setPage((currPage) => currPage - 1 )}></button>
-            <span>{page}</span>
+            <span>page:{page}</span>
             <button onClick={() => setPage((currPage) => currPage + 1 )}></button>
         </main>
     );  

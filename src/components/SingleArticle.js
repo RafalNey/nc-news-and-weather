@@ -3,13 +3,9 @@ import { useParams } from 'react-router-dom';
 import { getSingleArticle } from '../utils/api';
 import Votes from './Votes';
 
-
-
-
 const SingleArticle = (props) => {
 
-    const { article_id, title, body, topic, author, votes, created_at, comment_count } = props.article;
-    let dzien = new Date({created_at}).toLocaleTimeString();
+    const { article_id, title, body, author, votes } = useParams;
     const [article, setArticle] = useState({});
 
     useEffect(() => {
@@ -21,13 +17,11 @@ const SingleArticle = (props) => {
 
     return(
         <div>
-            <h2>{article.title}</h2>
-            <h4>author: {article.author}</h4>
-            <p>{article.body}</p>
-            <Votes votes={article.votes} article_id={article.article_id}/>
+            <h2>{title}</h2>
+            <h4>author: {author}</h4>
+            <p>{body}</p>
+            <Votes votes={votes} article_id={article_id}/>
         </div>
-
-
     )
 }
 

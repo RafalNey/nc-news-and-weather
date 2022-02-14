@@ -1,3 +1,23 @@
+.Weather {
+  background: #2b2e39;
+  color: #fff;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 600 px;
+  padding: 14px;
+  border-radius: 14px;
+  margin-top: 14px;
+}
+
+.ReturnButton {
+  border-radius: 10px;
+  background: red;
+  padding: 5px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/*
 .App input,
 .App button {
   margin: 20 px;
@@ -21,3 +41,4 @@
 .Form {
   margin: 20px;
 }
+*/

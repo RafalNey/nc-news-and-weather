@@ -11,8 +11,6 @@ function App() {
     <BrowserRouter>
     <div className="App">
       <div className="Pictures">
-        <img src="./pictures/weather-picture.jpg" alt="Weather" width="150" height="50"/>
-        <img src="./pictures/news.jpg" alt="Articles" width="150" height="50"/>
       </div>
       <Nav />
         <Routes>

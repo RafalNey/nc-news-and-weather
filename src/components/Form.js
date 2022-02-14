@@ -5,13 +5,13 @@ const Form = props => {
   return (
 
     <form onSubmit={props.submit}>
-        <input 
+        <input className="Input"
         type="text"
         value={props.value}
         placeholder="Name of the city..."
         onChange={props.change}
         />
-        <button>Search city</button>
+        <button className="Button">Search city</button>
     </form>
     
   )

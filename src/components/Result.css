@@ -1,0 +1,28 @@
+.Items {
+  background: #181a25;
+  color: #fff;
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 17px;
+}
+
+.Item1 {
+  background: #020205;
+  color: rgb(230, 222, 222);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #c1c5d8;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.Item {
+  background: #020205;
+  color: rgb(230, 222, 222);
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #c1c5d8;
+  border-radius: 10px;
+  padding: 5px;
+}

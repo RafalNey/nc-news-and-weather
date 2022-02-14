@@ -3,6 +3,8 @@ import './Weather.css';
 import Form from './Form';
 import Result from './Result';
 
+
+
 // My API key to weather webpage 
 const APIkey = "9514463719c757881282f9111d142acb";
 
@@ -20,14 +22,14 @@ class Weather extends Component {
     err: false,
   }
   
-  handleInputChange = (e) => {
+  handleInputChange = (event) => {
     this.setState({
-      value: e.target.value
+      value: event.target.value
     })
   }
 
-  handleCitySubmit = (e) => {
-    e.preventDefault()
+  handleCitySubmit = (event) => {
+    event.preventDefault()
     const API = `http://api.openweathermap.org/data/2.5/weather?q=${this.state.value}&appid=${APIkey}&units=metric`
 
     fetch(API)
@@ -35,7 +37,7 @@ class Weather extends Component {
       if (response.ok) {
         return response
       };
-      throw Error('Sorry. It wont work :-(')
+      throw Error("Sorry. It won't work :-(")
     })
     .then(response => 
       response.json())
@@ -63,6 +65,7 @@ class Weather extends Component {
     }));
     })
   }
+
 
   render() {
 

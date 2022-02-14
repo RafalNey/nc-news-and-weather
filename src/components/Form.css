@@ -1,0 +1,23 @@
+.Input {
+  padding: 5px;
+  font-size: 1.2em;
+  background: #232632;
+  color: #d3d4d6;
+  width: 100%;
+  margin-right: 7px;
+  border: 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+.Button {
+  background: #232632;
+  color: #00a7fa;
+  width: 80px;
+  height: 32px;
+  font-size: 1.7em;
+  border: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
